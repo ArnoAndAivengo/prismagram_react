@@ -4,7 +4,7 @@ import logger from "morgan"
 
 import schema from "./schema"
 
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4001
 
 const typeDefs = `
     type Query{

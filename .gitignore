@@ -38,6 +38,7 @@ bower_components
 build/Release
 
 # Dependency directories
+.idea
 node_modules/
 jspm_packages/
 
@@ -78,6 +79,7 @@ typings/
 # Next.js build output
 .next
 generated
+prisma.yml
 
 # Nuxt.js build / generate output
 .nuxt
