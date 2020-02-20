@@ -1,4 +1,4 @@
-# Prismagram on React
+# Prismagram
 
 Instragram clone with Express + Prisma + React and React Native
 
@@ -9,19 +9,18 @@ Instragram clone with Express + Prisma + React and React Native
 - [x] Confirm Secret (Login)
 - [x] Like / Unlike a photo
 - [x] Comment on a photo
-- [x] Log in
 - [x] Search by user
 - [x] Search by location
 - [x] Follow User
 - [x] Unfollow User
 - [x] Edit my profile
 - [x] See user profile
-- [x] See My profile
+- [x] See MY profile
 - [x] See the full photo
 - [x] Upload a photo
 - [x] Edit the photo (Delete)
 - [x] See the feed
-- [ ] See rooms
-- [ ] See room
-- [ ] Send private Message
+- [x] Send private Message
+- [x] See rooms
+- [x] See room
 - [ ] Receive Message (Realtime)

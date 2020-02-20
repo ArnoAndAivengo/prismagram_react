@@ -1,8 +1,8 @@
-import {prisma} from "../../../../generated/prisma-client";
+import { prisma } from "../../../../generated/prisma-client";
 
 export default {
   Query: {
-    searchUser: async(_, args) =>
+    searchUser: async (_, args) =>
       prisma.users({
         where: {
           OR: [
@@ -11,7 +11,6 @@ export default {
             { lastName_contains: args.term }
           ]
         }
-      }
-    )
+      })
   }
-}
+};

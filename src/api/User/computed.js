@@ -1,13 +1,13 @@
-import prisma from "../../../generated/prisma-client";
+import { prisma } from "../../../generated/prisma-client";
 
 export default {
   User: {
-    fullName: (parent) => {
-      return `${parent.firstName} ${parent.lastName}`
+    fullName: parent => {
+      return `${parent.firstName} ${parent.lastName}`;
     },
-    isFollowing: async (parent, _, {request}) => {
-      const { user } = request
-      const { id } = parent
+    isFollowing: async (parent, _, { request }) => {
+      const { user } = request;
+      const { id: parentId } = parent;
       try {
         return prisma.$exists.user({
           AND: [
@@ -15,20 +15,20 @@ export default {
               id: user.id
             },
             {
-              post: {
-                id
+              following_some: {
+                id: parentId
               }
             }
           ]
-        })
+        });
       } catch {
-        return false
+        return false;
       }
     },
-    isSelf: (parent, _, {request}) => {
-      const { user } = request
-      const { id: parentId } = parent
-      return user.id === parentId
+    isSelf: (parent, _, { request }) => {
+      const { user } = request;
+      const { id: parentId } = parent;
+      return user.id === parentId;
     }
   }
-}
+};
